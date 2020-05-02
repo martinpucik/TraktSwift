@@ -1,0 +1,2 @@
+# TraktSwift
+TraktTV API wrapper
