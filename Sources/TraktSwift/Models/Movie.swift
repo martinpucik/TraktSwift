@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Movie: Decodable {
-    let title: String
-    let year: Int
-    let ids: Identifiers
+    public let title: String
+    public let year: Int
+    public let ids: Identifiers
 }

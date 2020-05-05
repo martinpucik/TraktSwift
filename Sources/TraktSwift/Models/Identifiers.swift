@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Identifiers: Decodable {
-    let trakt: Int
-    let slug: String
-    let imdb: String?
-    let tmdb: Int?
-    let tvdb: Int?
+    public let trakt: Int
+    public let slug: String
+    public let imdb: String?
+    public let tmdb: Int?
+    public let tvdb: Int?
 }

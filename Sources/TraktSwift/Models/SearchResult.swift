@@ -8,8 +8,8 @@
 import Foundation
 
 public struct SearchResult: Decodable {
-    let type: SearchType
-    let score: Double
+    public let type: SearchType
+    public let score: Double
 
-    let movie: Movie?
+    public let movie: Movie?
 }
