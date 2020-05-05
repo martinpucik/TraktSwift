@@ -1,15 +1,68 @@
+//
+//  TraktSwiftTests.swift
+//  TraktSwift
+//
+//  Created by Martin Púčik on 02/05/2020.
+//
+
+import Foundation
 import XCTest
 @testable import TraktSwift
 
 final class TraktSwiftTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(TraktSwift().text, "Hello, World!")
+    static var allTests = [
+        ("testTrendingMovies", testTrendingMovies),
+        ("testPopularMovies", testPopularMovies),
+    ]
+    
+    override class func setUp() {
+        super.setUp()
+        Defaults.clientID = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"] ?? ""
+    }
+    
+    func testTrendingMovies() {
+        let expectation = XCTestExpectation()
+        Trakt.trendingMovies(completion: { result in
+            switch result {
+                case .success(let response):
+                    print(response)
+                    XCTAssertFalse(response.trendingMovies.isEmpty)
+                case .failure(let error):
+                    XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 5)
     }
 
-    static var allTests = [
-        ("testExample", testExample),
-    ]
+    func testPopularMovies() {
+        let expectation = XCTestExpectation()
+        Trakt.popularMovies(completion: { result in
+            switch result {
+                case .success(let response):
+                    print(response)
+                    XCTAssertFalse(response.movies.isEmpty)
+                case .failure(let error):
+                    XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 5)
+    }
+
+//    func testMostPlayerMovies() {
+//        let expectation = XCTestExpectation()
+//        Trakt.mostPlayerMovies(completion: { result in
+//            switch result {
+//                case .success(let response):
+//                    print(response)
+//                    XCTAssertFalse(response.movies.isEmpty)
+//                case .failure(let error):
+//                    XCTFail(error.localizedDescription)
+//            }
+//            expectation.fulfill()
+//        })
+//        wait(for: [expectation], timeout: 5)
+//    }
+
 }
