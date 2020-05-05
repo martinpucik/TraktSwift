@@ -36,14 +36,3 @@ public extension Trakt {
         Client.request(resource: Resource.Movie.mostPlayed(period), completion: completion)
     }
 }
-
-
-
-// MARK: - Search
-
-public extension Trakt {
-    @discardableResult
-    static func search(query: String, in types: [SearchType], completion: ((Result<SearchResponse, Error>) -> Void)?) -> URLSessionDataTask {
-        Client.request(resource: Resource.Search.search(query: query, types: types), completion: completion)
-    }
-}

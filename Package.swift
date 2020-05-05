@@ -7,7 +7,7 @@ let testTarget = PackageDescription.Target.testTarget(name: "TraktSwiftTests", d
 
 let package = Package(
     name: "TraktSwift",
-    platforms: [.iOS(.v13), .tvOS(.v13)],
+    platforms: [.iOS(.v8), .tvOS(.v9), .watchOS(.v2), .macOS(.v10_10)],
     products: [
         .library(name: "TraktSwift", targets: ["TraktSwift"]),
     ],
