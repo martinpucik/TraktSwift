@@ -25,8 +25,7 @@ final class TraktSwiftTests: XCTestCase {
         Trakt.trendingMovies(completion: { result in
             switch result {
                 case .success(let response):
-                    print(response)
-                    XCTAssertFalse(response.trendingMovies.isEmpty)
+                    XCTAssertTrue(response.trendingMovies.isEmpty)
                 case .failure(let error):
                     XCTFail(error.localizedDescription)
             }
@@ -40,7 +39,6 @@ final class TraktSwiftTests: XCTestCase {
         Trakt.popularMovies(completion: { result in
             switch result {
                 case .success(let response):
-                    print(response)
                     XCTAssertFalse(response.movies.isEmpty)
                 case .failure(let error):
                     XCTFail(error.localizedDescription)

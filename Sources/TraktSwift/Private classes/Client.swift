@@ -19,7 +19,7 @@ enum Client {
                 return
             }
             
-            print(try! JSONSerialization.jsonObject(with: data) as AnyObject)
+//            print(try! JSONSerialization.jsonObject(with: data) as AnyObject)
             
             do {
                 let resp = try JSONDecoder().decode(Response.self, from: data)
