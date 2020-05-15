@@ -12,8 +12,8 @@ extension Resource {
 }
 
 extension Resource.Search {
-    static func search(query: String, types: [SearchType]) -> Resource {
-        let typesString = types.map { $0.rawValue }.joined(separator: ",")
+    static func search(query: String, scopes: [SearchScope]) -> Resource {
+        let typesString = scopes.map { $0.rawValue }.joined(separator: ",")
         return Resource(path: "/search/\(typesString)", parameters: ["query": query])
     }
 }

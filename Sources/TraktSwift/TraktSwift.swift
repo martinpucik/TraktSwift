@@ -25,14 +25,14 @@ public enum Trakt {
 public extension Trakt {
     @discardableResult
     static func trendingMovies(completion: ((Result<MovieTrendingResponse, Error>) -> Void)?) -> URLSessionDataTask {
-        Client.request(resource: Resource.Movie.trending, completion: completion)
+        Client.request(Resource.Movie.trending, completion: completion)
     }
     @discardableResult
     static func popularMovies(completion: ((Result<MoviePopularResponse, Error>) -> Void)?) -> URLSessionDataTask {
-        Client.request(resource: Resource.Movie.popular, completion: completion)
+        Client.request(Resource.Movie.popular, completion: completion)
     }
     @discardableResult
     static func mostPlayerMovies(period: TimePeriod = .weekly, completion: ((Result<MoviePopularResponse, Error>) -> Void)?) -> URLSessionDataTask {
-        Client.request(resource: Resource.Movie.mostPlayed(period), completion: completion)
+        Client.request(Resource.Movie.mostPlayed(period), completion: completion)
     }
 }

@@ -14,8 +14,8 @@ import Combine
 
 public extension Trakt {
     @discardableResult
-    static func search(query: String, in types: [SearchType], completion: ((Result<SearchResponse, Error>) -> Void)?) -> URLSessionDataTask {
-        Client.request(resource: Resource.Search.search(query: query, types: types), completion: completion)
+    static func search(query: String, in scopes: [SearchScope], completion: ((Result<SearchResponse, Error>) -> Void)?) -> URLSessionDataTask {
+        Client.request(Resource.Search.search(query: query, scopes: scopes), completion: completion)
     }
 }
 
@@ -23,7 +23,7 @@ public extension Trakt {
 
 @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
 public extension Trakt {
-    static func search(query: String, in types: [SearchType]) -> AnyPublisher<SearchResponse, Error> {
-        Client.request(resource: Resource.Search.search(query: query, types: types))
+    static func search(query: String, in scopes: [SearchScope]) -> AnyPublisher<SearchResponse, Error> {
+        Client.request(Resource.Search.search(query: query, scopes: scopes))
     }
 }
