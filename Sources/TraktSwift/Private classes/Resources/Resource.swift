@@ -9,15 +9,15 @@ import Foundation
 
 // MARK: - ResourceProtocol
 
-protocol ResourceProtocol {
-    enum HttpMethod: String {
-        case GET
-        case PUT
-        case POST
-        case DELETE
-        case HEAD
-    }
+enum HttpMethod: String {
+    case GET
+    case PUT
+    case POST
+    case DELETE
+    case HEAD
+}
 
+protocol ResourceProtocol {
     var baseURL: URL { get }
     var method: HttpMethod { get }
     var path: String { get }

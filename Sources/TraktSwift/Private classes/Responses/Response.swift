@@ -7,6 +7,10 @@
 
 import Foundation
 
-protocol ResponseProtocol: Decodable {
+// MARK: - ResponseProtocol
 
+public protocol ResponseProtocol: Decodable { }
+
+protocol ResponsePaginating: ResponseProtocol {
+    var currentPage: String { get }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct SearchResponse: Decodable {
+public struct SearchResponse: ResponseProtocol {
     public let results: [SearchResult]
 
     public init(from decoder: Decoder) throws {
