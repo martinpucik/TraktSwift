@@ -7,22 +7,22 @@
 
 import Foundation
 
-enum HttpMethod: String {
-    case GET
-    case PUT
-    case POST
-    case DELETE
-    case HEAD
-}
+// MARK: - ResourceProtocol
 
 protocol ResourceProtocol {
-    var baseURL: URL { get }
+    enum HttpMethod: String {
+        case GET
+        case PUT
+        case POST
+        case DELETE
+        case HEAD
+    }
 
+    var baseURL: URL { get }
     var method: HttpMethod { get }
     var path: String { get }
     var parameters: [String: String]? { get }
     var headers: [String: String]? { get }
-
     var urlRequest: URLRequest { get }
 }
 
@@ -35,6 +35,8 @@ extension ResourceProtocol {
         ]
     }
 }
+
+// MARK: - Resource
 
 struct Resource: ResourceProtocol {
     #if TESTING

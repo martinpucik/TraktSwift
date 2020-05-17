@@ -31,7 +31,7 @@ final class TraktSearchTests: XCTestCase {
                 XCTFail(error.localizedDescription)
             }
         })
-        XCTAssertEqual(request.originalRequest?.url?.path, "/search/movie,show")
+        XCTAssertEqual(request.originalRequest?.url?.path, "/search/movie")
         XCTAssertEqual(request.originalRequest?.url?.query, "query=tron%20legacy")
         wait(for: [expectation], timeout: 5)
     }
