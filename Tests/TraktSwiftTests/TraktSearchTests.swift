@@ -21,7 +21,7 @@ final class TraktSearchTests: XCTestCase {
 
     func testSearch() {
         let expectation = XCTestExpectation()
-        let request = Trakt.search(query: "tron legacy", in: [.movie, .show], completion: { result in
+        let request = Trakt.search(query: "tron legacy", in: [.movie], completion: { result in
             switch result {
             case .success(let response):
                 print(response)

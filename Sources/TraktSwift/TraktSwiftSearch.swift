@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  TraktSwiftSearch.swift
+//  TraktSwift
 //
 //  Created by Martin Púčik on 05/05/2020.
 //
