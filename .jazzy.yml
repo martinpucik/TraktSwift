@@ -1,0 +1,5 @@
+clean: true
+author: martinpucik
+author_url: https://github.com/martinpucik/TraktSwift
+module: TraktSwift
+output: Documentation
