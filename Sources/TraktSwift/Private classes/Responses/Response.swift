@@ -11,6 +11,13 @@ import Foundation
 
 public protocol ResponseProtocol: Decodable { }
 
-protocol ResponsePaginating: ResponseProtocol {
-    var currentPage: String { get }
+public protocol ResponsePaginating: ResponseProtocol {
+    var pagination: ResponsePagination { get }
+}
+
+public struct ResponsePagination {
+    let currentPage: String
+    let itemsPerPage: String
+    let totalPageCount: String
+    let totalItemCount: String
 }
