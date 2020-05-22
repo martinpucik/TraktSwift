@@ -8,6 +8,6 @@
 import Foundation
 
 public struct TrendingMovie: Decodable {
-    let watchers: Int
-    let movie: Movie
+    public let watchers: Int
+    public let movie: Movie
 }
