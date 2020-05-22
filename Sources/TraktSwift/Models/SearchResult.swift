@@ -18,6 +18,9 @@ public struct SearchResult: Decodable {
     public let type: SearchResultType
     public let score: Double
 
+    /// Convenience getter for search result type associated value
+    public var movie: Movie? { associatedValue as? Movie }
+
     // MARK: - Lifecycle
 
     public init(from decoder: Decoder) throws {
@@ -31,6 +34,17 @@ public struct SearchResult: Decodable {
             type = SearchResultType.movie(movie)
         default:
             throw SearchResultError.scopeNotImplemented
+        }
+    }
+}
+
+// MARK: - Private methods
+
+private extension SearchResult {
+    var associatedValue: Any? {
+        switch type {
+        case .movie(let movie): return movie
+        default: return nil
         }
     }
 }
