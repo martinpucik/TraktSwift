@@ -23,6 +23,7 @@ protocol ResourceProtocol {
     var path: String { get }
     var parameters: [String: String]? { get }
     var headers: [String: String]? { get }
+    var page: Pagination? { get }
     var urlRequest: URLRequest { get }
 }
 
@@ -48,6 +49,7 @@ struct Resource: ResourceProtocol {
     let path: String
     let method: HttpMethod
 
+    let page: Pagination?
     let parameters: [String: String]?
     let headers: [String: String]?
 
@@ -70,15 +72,24 @@ struct Resource: ResourceProtocol {
                 }
             }
         }
+        if let page = page {
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            let currentItems = components?.queryItems
+            let pagingItems = page.urlComponentsValue.compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+            components?.queryItems = pagingItems + (currentItems ?? [])
+            request.url = components?.url
+        }
         return request
     }
 
     // MARK: - Lifecycle
 
-    init(path: String, method: HttpMethod = .GET, parameters: [String: String]? = nil, headers: [String: String]? = nil) {
+    init(path: String, method: HttpMethod = .GET, parameters: [String: String]? = nil,
+         headers: [String: String]? = nil, page: Page? = nil) {
         self.path = path
         self.method = method
         self.parameters = parameters
         self.headers = headers
+        self.page = page
     }
 }

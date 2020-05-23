@@ -48,19 +48,19 @@ final class TraktSwiftTests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-//    func testMostPlayerMovies() {
-//        let expectation = XCTestExpectation()
-//        Trakt.mostPlayerMovies(completion: { result in
-//            switch result {
-//                case .success(let response):
-//                    print(response)
-//                    XCTAssertFalse(response.movies.isEmpty)
-//                case .failure(let error):
-//                    XCTFail(error.localizedDescription)
-//            }
-//            expectation.fulfill()
-//        })
-//        wait(for: [expectation], timeout: 5)
-//    }
+    func testMostPlayerMovies() {
+        let expectation = XCTestExpectation()
+        Trakt.mostPlayedMovies(completion: { result in
+            switch result {
+                case .success(let response):
+                    print(response)
+                    XCTAssertFalse(response.movies.isEmpty)
+                case .failure(let error):
+                    XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 5)
+    }
 
 }

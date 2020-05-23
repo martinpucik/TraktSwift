@@ -12,10 +12,16 @@ extension Resource {
 }
 
 extension Resource.Movie {
-    static var trending: Resource { Resource(path: "/movies/trending") }
-    static var popular: Resource { Resource(path: "/movies/popular") }
-    static func mostPlayed(_ period: TimePeriod) -> Resource {
-        Resource(path: "/movies/player/\(period)")
+    static func trending(page: Page) -> Resource {
+        Resource(path: "/movies/trending", page: page)
     }
-
+    static func popular(page: Page) -> Resource {
+        Resource(path: "/movies/popular", page: page)
+    }
+    static func mostPlayed(for period: TimePeriod, page: Page) -> Resource {
+        Resource(path: "/movies/played/\(period)", page: page)
+    }
+    static func mostWatched(for period: TimePeriod, page: Page) -> Resource {
+        Resource(path: "/movies/watched/\(period)", page: page)
+    }
 }
