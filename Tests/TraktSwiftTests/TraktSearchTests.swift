@@ -24,7 +24,6 @@ final class TraktSearchTests: XCTestCase {
         let request = Trakt.search(query: "tron legacy", in: [.movie], completion: { result in
             switch result {
             case .success(let response):
-                print(response)
                 XCTAssertFalse(response.results.isEmpty)
                 expectation.fulfill()
             case .failure(let error):

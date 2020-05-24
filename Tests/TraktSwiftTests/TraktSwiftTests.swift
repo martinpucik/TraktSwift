@@ -53,7 +53,6 @@ final class TraktSwiftTests: XCTestCase {
         Trakt.mostPlayedMovies(completion: { result in
             switch result {
                 case .success(let response):
-                    print(response)
                     XCTAssertFalse(response.movies.isEmpty)
                 case .failure(let error):
                     XCTFail(error.localizedDescription)
