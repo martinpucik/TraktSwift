@@ -1,5 +1,5 @@
 //
-//  MostPlayedMovie.swift
+//  MovieMostPlayed.swift
 //  TraktSwift
 //
 //  Created by Martin Púčik on 05/05/2020.
@@ -14,7 +14,7 @@ private enum Keys: String, CodingKey {
     case collectedCount = "collected_count"
 }
 
-public struct MostPlayedMovie: Decodable {
+public struct MovieMostPlayed: Decodable {
     let movie: Movie
     let watcherCount: Int
     let playCount: Int
