@@ -17,6 +17,7 @@ final class TraktSearchTests: XCTestCase {
     override class func setUp() {
         super.setUp()
         Defaults.clientID = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"] ?? ""
+        Defaults.clientSecret = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_SECRET"] ?? ""
     }
 
     func testSearch() {

@@ -21,4 +21,15 @@ enum Defaults {
             ud.set(newValue, forKey: "client_id")
         }
     }
+    static var clientSecret: String {
+        get {
+            guard let clientSecret = ud.value(forKey: "client_secret") as? String else {
+                fatalError("TraktSwift: Failed to load TraktTV CLIENT SECRET from storage")
+            }
+            return clientSecret
+        }
+        set {
+            ud.set(newValue, forKey: "client_secret")
+        }
+    }
 }
