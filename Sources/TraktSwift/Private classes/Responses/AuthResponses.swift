@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - AuthGenerateDeviceCodeResponse
+
 public struct AuthGenerateDeviceCodeResponse: ResponseProtocol {
 
     // MARK: - Public properties
@@ -36,5 +38,42 @@ public struct AuthGenerateDeviceCodeResponse: ResponseProtocol {
         verificationURL = try container.decode(URL.self, forKey: .verificationURL)
         expiresIn = try container.decode(Int.self, forKey: .expiresIn)
         interval = try container.decode(Int.self, forKey: .interval)
+    }
+}
+
+// MARK: - AuthRequestDeviceTokenResponse
+
+public struct AuthRequestDeviceTokenResponse: ResponseProtocol {
+
+    // MARK: - Public properties
+
+    public let accessToken: String
+    public let refreshToken: String
+    public let tokenType: String
+    public let expiresIn: Int
+    public let scope: String
+    public let createdAt: Int
+
+    // MARK: - Private properties
+
+    private enum Keys: String, CodingKey {
+        case accessToken = "access_token"
+        case refreshToken = "refresh_token"
+        case tokenType = "token_type"
+        case expiresIn = "expires_in"
+        case scope
+        case createdAt = "created_at"
+    }
+
+    // MARK: - Lifecycle
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Keys.self)
+        accessToken = try container.decode(String.self, forKey: .accessToken)
+        refreshToken = try container.decode(String.self, forKey: .refreshToken)
+        tokenType = try container.decode(String.self, forKey: .tokenType)
+        expiresIn = try container.decode(Int.self, forKey: .expiresIn)
+        scope = try container.decode(String.self, forKey: .scope)
+        createdAt = try container.decode(Int.self, forKey: .createdAt)
     }
 }

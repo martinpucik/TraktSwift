@@ -24,4 +24,8 @@ public extension Trakt {
     static var generateDeviceCode: AnyPublisher<AuthGenerateDeviceCodeResponse, Error> {
         Client.request(Resource.Auth.generateDeviceCode)
     }
+
+    static func requestDeviceToken(deviceCodeResponse: AuthGenerateDeviceCodeResponse) -> AnyPublisher<AuthRequestDeviceTokenResponse, Error> {
+        Client.request(Resource.Auth.requestDeviceToken(deviceCodeResponse: deviceCodeResponse))
+    }
 }
