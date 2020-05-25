@@ -18,9 +18,6 @@ enum Client {
                 completion?(.failure(error!))
                 return
             }
-            
-//            print(try! JSONSerialization.jsonObject(with: data) as AnyObject)
-            
             do {
                 let resp = try JSONDecoder().decode(Response.self, from: data)
                 completion?(.success(resp))

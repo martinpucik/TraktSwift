@@ -11,11 +11,11 @@ public struct AuthGenerateDeviceCodeResponse: ResponseProtocol {
 
     // MARK: - Public properties
 
-    let deviceCode: String
-    let userCode: String
-    let verificationURL: URL
-    let expiresIn: Int
-    let interval: Int
+    public let deviceCode: String
+    public let userCode: String
+    public let verificationURL: URL
+    public let expiresIn: Int
+    public let interval: Int
 
     // MARK: - Private properties
 
