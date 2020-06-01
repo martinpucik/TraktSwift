@@ -12,11 +12,16 @@ import Combine
 
 enum Client {
     static func request<Response: ResponseProtocol>(_ resource: ResourceProtocol, completion: ((Result<Response, Error>) -> Void)?) -> URLSessionDataTask {
-        print(resource.urlRequest)
-        let task = URLSession.shared.dataTask(with: resource.urlRequest, completionHandler: { data, _ , error in
+        let task = URLSession.shared.dataTask(with: resource.urlRequest, completionHandler: { data, response, error in
             guard let data = data else {
                 completion?(.failure(error!))
                 return
+            }
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 204 {
+                    completion?(.failure(TraktError.noContentResponse))
+                    return
+                }
             }
             do {
                 let resp = try JSONDecoder().decode(Response.self, from: data)

@@ -10,3 +10,7 @@ import Foundation
 public enum SearchResultError: Error {
     case scopeNotImplemented
 }
+
+public enum TraktError: Error {
+    case noContentResponse
+}
