@@ -38,25 +38,18 @@ final class TraktSearchTests: XCTestCase {
     }
 
     func testSearchCombine() {
-        let expectation = XCTestExpectation()
-        let request = Trakt.search(query: "tron legacy", in: [.movie])
-            .sink(receiveCompletion: { result in
+        if #available(macOS 10.15, *) {
+            let expectation = XCTestExpectation()
+            let cancellable = Trakt.search(query: "tron legacy", in: [.movie])
+                .sink(receiveCompletion: { result in
 
-            }, receiveValue: { response in
-                XCTAssertFalse(response.results.isEmpty)
-            })
+                }, receiveValue: { response in
+                    XCTAssertFalse(response.results.isEmpty)
+                })
+            wait(for: [expectation], timeout: 5)
+        } else {
+            XCTFail("Testing Combine on unsupported version")
+        }
 
-//        search(query: "tron legacy", in: [.movie], completion: { result in
-//            switch result {
-//                case .success(let response):
-//                    XCTAssertFalse(response.results.isEmpty)
-//                    expectation.fulfill()
-//                case .failure(let error):
-//                    XCTFail(error.localizedDescription)
-//            }
-//        })
-//        XCTAssertEqual(request.originalRequest?.url?.path, "/search/movie")
-//        XCTAssertEqual(request.originalRequest?.url?.query, "query=tron%20legacy")
-        wait(for: [expectation], timeout: 5)
     }
 }
