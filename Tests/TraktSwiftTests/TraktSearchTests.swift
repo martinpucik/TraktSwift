@@ -10,6 +10,8 @@ import XCTest
 @testable import TraktSwift
 
 final class TraktSearchTests: XCTestCase {
+    private var bag = Set<AnyCancellable>()
+
     static var allTests = [
         ("testSearch", testSearch),
         ("testSearchCombine", testSearchCombine)
@@ -40,12 +42,12 @@ final class TraktSearchTests: XCTestCase {
     func testSearchCombine() {
         if #available(macOS 10.15, *) {
             let expectation = XCTestExpectation()
-            let cancellable = Trakt.search(query: "tron legacy", in: [.movie])
+            Trakt.search(query: "tron legacy", in: [.movie])
                 .sink(receiveCompletion: { result in
 
                 }, receiveValue: { response in
                     XCTAssertFalse(response.results.isEmpty)
-                })
+                }).store(in: &bag)
             wait(for: [expectation], timeout: 5)
         } else {
             XCTFail("Testing Combine on unsupported version")
