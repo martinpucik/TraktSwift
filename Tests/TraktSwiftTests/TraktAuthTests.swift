@@ -39,6 +39,6 @@ final class TraktAuthTests: XCTestCase {
                 XCTAssertEqual(response.interval, 5)
                 expectation.fulfill()
             }).store(in: &bag)
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 10)
     }
 }
