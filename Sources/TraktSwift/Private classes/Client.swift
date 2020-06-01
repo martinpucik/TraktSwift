@@ -43,6 +43,7 @@ enum Client {
                         throw TraktError.noContentResponse
                     }
                 }
+                print(String(data: data, encoding: .utf8))
                 return data
             }
             .decode(type: Response.self, decoder: JSONDecoder())

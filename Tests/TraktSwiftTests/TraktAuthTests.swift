@@ -13,6 +13,10 @@ import Combine
 @testable import TraktSwift
 
 final class TraktAuthTests: XCTestCase {
+    @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+    static var allTests = [
+        ("testGenerateDeviceCodePublisher", testGenerateDeviceCodePublisher),
+    ]
 
     override class func setUp() {
         super.setUp()
