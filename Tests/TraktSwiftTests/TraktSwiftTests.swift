@@ -9,17 +9,11 @@ import Foundation
 import XCTest
 @testable import TraktSwift
 
-final class TraktSwiftTests: XCTestCase {
+final class TraktSwiftTests: TestCase {
     static var allTests = [
         ("testTrendingMovies", testTrendingMovies),
         ("testPopularMovies", testPopularMovies),
     ]
-    
-    override class func setUp() {
-        super.setUp()
-        Defaults.clientID = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"] ?? ""
-        Defaults.clientSecret = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_SECRET"] ?? ""
-    }
     
     func testTrendingMovies() {
         let expectation = XCTestExpectation()
@@ -62,5 +56,4 @@ final class TraktSwiftTests: XCTestCase {
         })
         wait(for: [expectation], timeout: 5)
     }
-
 }

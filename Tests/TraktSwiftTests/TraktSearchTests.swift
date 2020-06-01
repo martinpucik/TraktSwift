@@ -9,19 +9,15 @@ import Foundation
 import XCTest
 @testable import TraktSwift
 
-final class TraktSearchTests: XCTestCase {
-    private var bag = Set<AnyCancellable>()
+#if canImport(Combine)
+import Combine
+#endif
+
+final class TraktSearchTests: TestCase {
 
     static var allTests = [
         ("testSearch", testSearch),
-        ("testSearchCombine", testSearchCombine)
     ]
-
-    override class func setUp() {
-        super.setUp()
-        Defaults.clientID = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"] ?? ""
-        Defaults.clientSecret = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_SECRET"] ?? ""
-    }
 
     func testSearch() {
         let expectation = XCTestExpectation()
@@ -38,20 +34,24 @@ final class TraktSearchTests: XCTestCase {
         XCTAssertEqual(request.originalRequest?.url?.query, "query=tron%20legacy")
         wait(for: [expectation], timeout: 5)
     }
+}
+
+@available(OSX 10.15, *)
+final class TraktSearchCombineTests: TestCase {
+    static var allTests = [
+        ("testSearchCombine", testSearchCombine)
+    ]
+
+    private var bag = Set<AnyCancellable>()
 
     func testSearchCombine() {
-        if #available(macOS 10.15, *) {
-            let expectation = XCTestExpectation()
-            Trakt.search(query: "tron legacy", in: [.movie])
-                .sink(receiveCompletion: { result in
+        let expectation = XCTestExpectation()
+        Trakt.search(query: "tron legacy", in: [.movie])
+            .sink(receiveCompletion: { result in
 
-                }, receiveValue: { response in
-                    XCTAssertFalse(response.results.isEmpty)
-                }).store(in: &bag)
-            wait(for: [expectation], timeout: 5)
-        } else {
-            XCTFail("Testing Combine on unsupported version")
-        }
-
+            }, receiveValue: { response in
+                XCTAssertFalse(response.results.isEmpty)
+            }).store(in: &bag)
+        wait(for: [expectation], timeout: 5)
     }
 }
