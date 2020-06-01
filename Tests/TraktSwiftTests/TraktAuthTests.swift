@@ -19,13 +19,11 @@ final class TraktAuthTests: TestCase {
 }
 
 @available(OSX 10.15, *)
-final class TraktAuthCombineTests: TestCase {
+final class TraktAuthCombineTests: CombineTestCase {
 
     static var allTests = [
         ("testGenerateDeviceCodePublisher", testGenerateDeviceCodePublisher),
     ]
-
-    private var bag = Set<AnyCancellable>()
 
     func testGenerateDeviceCodePublisher() {
         let expectation = XCTestExpectation()

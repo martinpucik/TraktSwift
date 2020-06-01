@@ -37,20 +37,23 @@ final class TraktSearchTests: TestCase {
 }
 
 @available(OSX 10.15, *)
-final class TraktSearchCombineTests: TestCase {
+final class TraktSearchCombineTests: CombineTestCase {
+
     static var allTests = [
         ("testSearchCombine", testSearchCombine)
     ]
-
-    private var bag = Set<AnyCancellable>()
 
     func testSearchCombine() {
         let expectation = XCTestExpectation()
         Trakt.search(query: "tron legacy", in: [.movie])
             .sink(receiveCompletion: { result in
-
+                switch result {
+                    case .failure(let error): XCTFail(error.localizedDescription)
+                    default: break
+                }
             }, receiveValue: { response in
                 XCTAssertFalse(response.results.isEmpty)
+                expectation.fulfill()
             }).store(in: &bag)
         wait(for: [expectation], timeout: 5)
     }
