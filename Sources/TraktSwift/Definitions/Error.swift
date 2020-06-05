@@ -7,14 +7,14 @@
 
 import Foundation
 
-public enum SearchResultError: Error {
+public enum SearchResultError: Error, Equatable {
     case scopeNotImplemented
 }
 
-public enum TraktError: Error {
+public enum TraktError: Error, Equatable {
     case responseValidationFailed(message: String)
 }
 
-public enum AuthError: Error {
+public enum AuthError: Error, Equatable {
     case deviceCodeNotAuthorizedYet
 }
