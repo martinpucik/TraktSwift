@@ -15,3 +15,8 @@ jobs:
       run: swift test -c release -Xswiftc -enable-testing -Xswiftc "-DTESTING" --enable-code-coverage
       env:
           TESTS_TRAKT_STAGING_CLIENT_ID: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_ID }}
+    - uses: codecov/codecov-action@v1
+      name: CodeCov export
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: true
