@@ -17,12 +17,6 @@ enum Client {
                 completion?(.failure(error!))
                 return
             }
-            if let response = response as? HTTPURLResponse {
-                if response.statusCode == 204 {
-                    completion?(.failure(TraktError.noContentResponse))
-                    return
-                }
-            }
             do {
                 let resp = try JSONDecoder().decode(Response.self, from: data)
                 completion?(.success(resp))

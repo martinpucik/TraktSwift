@@ -39,10 +39,7 @@ extension ResponseValidating {
                 }
                 let code = response.statusCode
                 switch code {
-                case 200..<299:
-                    if code == 204 {
-                        throw TraktError.noContentResponse
-                    }
+                case 200...299:
                     return data
                 default:
                     let string = String(data: data, encoding: .utf8)

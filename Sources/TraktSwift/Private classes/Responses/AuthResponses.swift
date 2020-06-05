@@ -76,4 +76,26 @@ public struct AuthRequestDeviceTokenResponse: ResponseProtocol {
         scope = try container.decode(String.self, forKey: .scope)
         createdAt = try container.decode(Int.self, forKey: .createdAt)
     }
+
+    public static var validate: (Data, URLResponse) throws -> Data? {
+        return { data, response in
+            guard let response = response as? HTTPURLResponse else {
+                return data
+            }
+            let code = response.statusCode
+            switch code {
+                case 200...299:
+                    return data
+                case 400:
+                    let string = String(data: data, encoding: .utf8) ?? ""
+                    if string.isEmpty {
+                        throw AuthError.deviceCodeNotAuthorizedYet
+                    }
+                    fallthrough
+                default:
+                    let string = String(data: data, encoding: .utf8)
+                    throw TraktError.responseValidationFailed(message: string ?? "No error provided")
+            }
+        }
+    }
 }
