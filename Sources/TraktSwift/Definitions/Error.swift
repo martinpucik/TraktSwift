@@ -13,4 +13,5 @@ public enum SearchResultError: Error {
 
 public enum TraktError: Error {
     case noContentResponse
+    case responseValidationFailed(message: String)
 }

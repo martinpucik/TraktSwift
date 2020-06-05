@@ -35,16 +35,9 @@ enum Client {
     }
 
     @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    static func request<Response: ResponseProtocol>(_ resource: ResourceProtocol) -> AnyPublisher<Response, Error> {
+    static func request<Response: ResponseProtocol & ResponseValidating>(_ resource: ResourceProtocol) -> AnyPublisher<Response, Error> {
         URLSession.shared.dataTaskPublisher(for: resource.urlRequest)
-            .tryCompactMap { data, response -> Data in
-                if let response = response as? HTTPURLResponse {
-                    if response.statusCode == 204 {
-                        throw TraktError.noContentResponse
-                    }
-                }
-                return data
-            }
+            .tryCompactMap(Response.validate)
             .decode(type: Response.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
