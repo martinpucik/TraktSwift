@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES "OTHER_SWIFT_FLAGS=-D TESTING"
+      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES "OTHER_SWIFT_FLAGS=-D TESTING" | xcpretty
       env:
           TESTS_TRAKT_STAGING_CLIENT_ID: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_ID }}
     - uses: codecov/codecov-action@v1
