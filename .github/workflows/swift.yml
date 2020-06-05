@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: swift test -c release -Xswiftc -enable-testing -Xswiftc "-DTESTING"
+      run: swift test -c release -Xswiftc -enable-testing -Xswiftc "-DTESTING" --enable-code-coverage
       env:
           TESTS_TRAKT_STAGING_CLIENT_ID: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_ID }}
