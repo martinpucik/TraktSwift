@@ -21,7 +21,7 @@ final class TraktSearchTests: TestCase {
 
     func testSearch() {
         let expectation = XCTestExpectation()
-        let request = Trakt.search(query: "tron legacy", in: [.movie], completion: { result in
+        let request = client.search(query: "tron legacy", in: [.movie], completion: { result in
             switch result {
             case .success(let response):
                 XCTAssertFalse(response.results.isEmpty)
@@ -45,7 +45,7 @@ final class TraktSearchCombineTests: CombineTestCase {
 
     func testSearchCombine() {
         let expectation = XCTestExpectation()
-        Trakt.search(query: "tron legacy", in: [.movie])
+        client.search(query: "tron legacy", in: [.movie])
             .sink(receiveCompletion: { result in
                 switch result {
                     case .failure(let error): XCTFail(error.localizedDescription)

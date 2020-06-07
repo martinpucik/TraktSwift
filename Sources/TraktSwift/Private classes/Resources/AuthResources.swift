@@ -12,15 +12,15 @@ extension Resource {
 }
 
 extension Resource.Auth {
-    static var generateDeviceCode: Resource {
-        Resource(path: "/oauth/device/code", method: .POST, parameters: ["client_id": Defaults.clientID])
+    static func generateDeviceCode(clientID: String) -> Resource {
+        Resource(path: "/oauth/device/code", method: .POST, parameters: ["client_id": clientID], clientID: clientID)
     }
 
-    static func requestDeviceToken(deviceCodeResponse: AuthGenerateDeviceCodeResponse) -> Resource {
+    static func requestDeviceToken(deviceCodeResponse: AuthGenerateDeviceCodeResponse, clientID: String, clientSecret: String) -> Resource {
         Resource(path: "/oauth/device/token", method: .POST, parameters: [
-            "client_id": Defaults.clientID,
-            "client_secret": Defaults.clientSecret,
+            "client_id": clientID,
+            "client_secret": clientSecret,
             "code": deviceCodeResponse.deviceCode
-        ])
+        ], clientID: clientID)
     }
 }

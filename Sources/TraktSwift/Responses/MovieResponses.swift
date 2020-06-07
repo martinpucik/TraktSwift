@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MovieTrendingResponse: ResponseProtocol {
+public struct MovieTrendingResponse: ResponseProviding {
     public let trendingMovies: [MovieTrending]
 
     public init(from decoder: Decoder) throws {
@@ -16,7 +16,7 @@ public struct MovieTrendingResponse: ResponseProtocol {
     }
 }
 
-public struct MoviePopularResponse: ResponseProtocol {
+public struct MoviePopularResponse: ResponseProviding {
     public let movies: [Movie]
 
     public init(from decoder: Decoder) throws {
@@ -25,7 +25,7 @@ public struct MoviePopularResponse: ResponseProtocol {
     }
 }
 
-public struct MovieMostPlayedResponse: ResponseProtocol {
+public struct MovieMostPlayedResponse: ResponseProviding {
     public let movies: [MovieMostPlayed]
 
     public init(from decoder: Decoder) throws {

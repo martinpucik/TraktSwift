@@ -21,11 +21,11 @@ public extension Trakt {
     /// Generate new codes to start the device authentication process.
     /// The `device_code` and `interval` will be used later to poll for the `access_token`
     /// The `user_code` and `verification_url` should be presented to the user as mentioned in the flow steps above.
-    static var generateDeviceCode: AnyPublisher<AuthGenerateDeviceCodeResponse, Error> {
-        Client.request(Resource.Auth.generateDeviceCode)
+    var generateDeviceCode: AnyPublisher<AuthGenerateDeviceCodeResponse, Error> {
+        Client.request(Resource.Auth.generateDeviceCode(clientID: clientID))
     }
 
-    static func requestDeviceToken(deviceCodeResponse: AuthGenerateDeviceCodeResponse) -> AnyPublisher<AuthRequestDeviceTokenResponse, Error> {
-        Client.request(Resource.Auth.requestDeviceToken(deviceCodeResponse: deviceCodeResponse))
+    func requestDeviceToken(deviceCodeResponse: AuthGenerateDeviceCodeResponse) -> AnyPublisher<AuthRequestDeviceTokenResponse, Error> {
+        Client.request(Resource.Auth.requestDeviceToken(deviceCodeResponse: deviceCodeResponse, clientID: clientID, clientSecret: clientSecret))
     }
 }

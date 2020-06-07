@@ -14,11 +14,8 @@ import Combine
 #endif
 
 class TestCase: XCTestCase {
-    override class func setUp() {
-        super.setUp()
-        Defaults.clientID = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"] ?? ""
-        Defaults.clientSecret = ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_SECRET"] ?? ""
-    }
+    let client: Trakt = Trakt(clientID: ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_ID"]!,
+                              clientSecret: ProcessInfo.processInfo.environment["TESTS_TRAKT_STAGING_CLIENT_SECRET"]!)
 }
 
 @available(OSX 10.15, *)

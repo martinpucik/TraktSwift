@@ -27,7 +27,7 @@ final class TraktAuthCombineTests: CombineTestCase {
 
     func testGenerateDeviceCodePublisher() {
         let expectation = XCTestExpectation()
-        Trakt.generateDeviceCode
+        client.generateDeviceCode
             .sink(receiveCompletion: { completion in
                 switch completion {
                     case .failure(let error): XCTFail(error.localizedDescription)

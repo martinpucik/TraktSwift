@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - ResponseProtocol
 
-public protocol ResponseProtocol: Decodable, ResponseValidating { }
+public protocol ResponseProviding: Decodable, ResponseValidating { }
 
 // MARK: - ResponsePaginating
 

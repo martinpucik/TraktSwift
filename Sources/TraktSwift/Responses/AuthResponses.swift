@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - AuthGenerateDeviceCodeResponse
 
-public struct AuthGenerateDeviceCodeResponse: ResponseProtocol {
+public struct AuthGenerateDeviceCodeResponse: ResponseProviding {
 
     // MARK: - Public properties
 
@@ -43,7 +43,7 @@ public struct AuthGenerateDeviceCodeResponse: ResponseProtocol {
 
 // MARK: - AuthRequestDeviceTokenResponse
 
-public struct AuthRequestDeviceTokenResponse: ResponseProtocol {
+public struct AuthRequestDeviceTokenResponse: ResponseProviding {
 
     // MARK: - Public properties
 

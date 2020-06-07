@@ -17,7 +17,7 @@ final class TraktSwiftTests: TestCase {
     
     func testTrendingMovies() {
         let expectation = XCTestExpectation()
-        Trakt.trendingMovies(completion: { result in
+        client.trendingMovies(completion: { result in
             switch result {
                 case .success(let response):
                     XCTAssertTrue(response.trendingMovies.isEmpty)
@@ -31,7 +31,7 @@ final class TraktSwiftTests: TestCase {
 
     func testPopularMovies() {
         let expectation = XCTestExpectation()
-        Trakt.popularMovies(completion: { result in
+        client.popularMovies(completion: { result in
             switch result {
                 case .success(let response):
                     XCTAssertFalse(response.movies.isEmpty)
@@ -45,7 +45,7 @@ final class TraktSwiftTests: TestCase {
 
     func testMostPlayerMovies() {
         let expectation = XCTestExpectation()
-        Trakt.mostPlayedMovies(completion: { result in
+        client.mostPlayedMovies(completion: { result in
             switch result {
                 case .success(let response):
                     XCTAssertFalse(response.movies.isEmpty)
