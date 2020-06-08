@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run tests
-      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES -derivedDataPath "./build"
+      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES -derivedDataPath "./build" | xcpretty
       env:
           TESTS_TRAKT_STAGING_CLIENT_ID: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_ID }}
           TESTS_TRAKT_STAGING_CLIENT_SECRET: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_SECRET }}
@@ -26,4 +26,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: test-artifacts
-        path: ./build/Logs
+        path: ./build/Logs/Tests
