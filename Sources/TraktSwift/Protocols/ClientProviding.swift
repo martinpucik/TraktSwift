@@ -11,8 +11,8 @@ import Combine
 #endif
 
 public protocol ClientProviding {
-    static func request<Response: ResponseProviding>(_ resource: ResourceProviding, completion: ((Result<Response, Error>) -> Void)?) -> URLSessionDataTask
+    func request<Response: ResponseProviding>(_ resource: ResourceProviding, completion: ((Result<Response, Error>) -> Void)?) -> URLSessionDataTask
 
     @available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
-    static func request<Response: ResponseProviding & ResponseValidating>(_ resource: ResourceProviding) -> AnyPublisher<Response, Error>
+    func request<Response: ResponseProviding & ResponseValidating>(_ resource: ResourceProviding) -> AnyPublisher<Response, Error>
 }

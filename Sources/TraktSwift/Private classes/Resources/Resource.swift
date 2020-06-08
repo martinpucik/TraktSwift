@@ -9,7 +9,6 @@ import Foundation
 
 struct Resource: ResourceProviding {
 
-    let baseURL: URL = URL(string: "https://api.trakt.tv")!
     let path: String
     let method: HttpMethod
 
@@ -24,8 +23,8 @@ struct Resource: ResourceProviding {
         ]
     }
 
-    var urlRequest: URLRequest {
-        let url = baseURL.appendingPathComponent(path)
+    func makeUrlRequest(with base: URL) -> URLRequest {
+        let url = base.appendingPathComponent(path)
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
         request.allHTTPHeaderFields = defaultHeaders.merging(headers ?? [:], uniquingKeysWith: { current, _  in current })

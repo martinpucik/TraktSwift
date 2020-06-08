@@ -16,11 +16,10 @@ public enum HttpMethod: String {
 }
 
 public protocol ResourceProviding {
-    var baseURL: URL { get }
     var method: HttpMethod { get }
     var path: String { get }
     var parameters: [String: String]? { get }
     var headers: [String: String]? { get }
     var page: Pagination? { get }
-    var urlRequest: URLRequest { get }
+    func makeUrlRequest(with base: URL) -> URLRequest
 }

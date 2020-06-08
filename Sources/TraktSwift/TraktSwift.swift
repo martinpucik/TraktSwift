@@ -13,6 +13,7 @@ public struct Trakt {
 
     internal let clientID: String
     internal let clientSecret: String
+    internal let client: ClientProviding
 
     // MARK: - Lifecycle
 
@@ -24,7 +25,8 @@ public struct Trakt {
     ///   - bundle: 
     public init(clientIDKey: String = "TRAKT_CLIENT_ID_KEY",
                 clientSecretKey: String = "TRAKT_CLIENT_SECRET_KEY",
-                bundle: Bundle = Bundle.main) {
+                bundle: Bundle = Bundle.main,
+                client: ClientProviding = Client()) {
         guard
             let clientID = bundle.infoDictionary?[clientIDKey] as? String,
             !clientID.isEmpty,
@@ -36,13 +38,15 @@ public struct Trakt {
 
         self.clientID = clientID
         self.clientSecret = clientSecret
+        self.client = client
     }
     /// Initialize the TrackSwift object directly providing your TraktTV clientID and clientSecret
     /// - Parameters:
     ///   - clientID:
     ///   - clientSecret: 
-    public init(clientID: String, clientSecret: String) {
+    public init(clientID: String, clientSecret: String, client: ClientProviding = Client()) {
         self.clientID = clientID
         self.clientSecret = clientSecret
+        self.client = client
     }
 }
