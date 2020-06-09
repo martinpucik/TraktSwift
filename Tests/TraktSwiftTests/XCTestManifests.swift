@@ -11,6 +11,7 @@ import XCTest
 public func allTests() -> [XCTestCaseEntry] {
     return [
         testCase(TraktSwiftTests.allTests),
+        testCase(TraktSearchTests.allTests),
     ]
 }
 #endif

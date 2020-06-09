@@ -30,8 +30,10 @@ final class TraktAuthCombineTests: CombineTestCase {
         client.generateDeviceCode
             .sink(receiveCompletion: { completion in
                 switch completion {
-                    case .failure(let error): XCTFail(error.localizedDescription)
-                    default: break
+                case .failure(let error):
+                    XCTFail(error.localizedDescription)
+                    expectation.fulfill()
+                default: break
                 }
             }, receiveValue: { response in
                 XCTAssertFalse(response.deviceCode.isEmpty)

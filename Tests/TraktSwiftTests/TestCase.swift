@@ -22,4 +22,9 @@ class TestCase: XCTestCase {
 @available(OSX 10.15, *)
 class CombineTestCase: TestCase {
     var bag = Set<AnyCancellable>()
+
+    override func setUp() {
+        super.setUp()
+        bag = Set<AnyCancellable>()
+    }
 }

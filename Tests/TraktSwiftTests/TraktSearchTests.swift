@@ -25,14 +25,15 @@ final class TraktSearchTests: TestCase {
             switch result {
             case .success(let response):
                 XCTAssertFalse(response.results.isEmpty)
-                expectation.fulfill()
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
+            expectation.fulfill()
         })
+        print(request.originalRequest)
         XCTAssertEqual(request.originalRequest?.url?.path, "/search/movie")
         XCTAssertEqual(request.originalRequest?.url?.query, "query=tron%20legacy")
-        wait(for: [expectation], timeout: 5)
+        wait(for: [expectation], timeout: 15)
     }
 }
 
@@ -48,8 +49,10 @@ final class TraktSearchCombineTests: CombineTestCase {
         client.search(query: "tron legacy", in: [.movie])
             .sink(receiveCompletion: { result in
                 switch result {
-                    case .failure(let error): XCTFail(error.localizedDescription)
-                    default: break
+                case .failure(let error):
+                    XCTFail(error.localizedDescription)
+                    expectation.fulfill()
+                default: break
                 }
             }, receiveValue: { response in
                 XCTAssertFalse(response.results.isEmpty)

@@ -14,7 +14,7 @@ public struct Client: ClientProviding {
 
     // MARK: - Private properties
 
-    private let baseURL: URL
+    internal let baseURL: URL
 
     // MARK: - Lifecycle
 

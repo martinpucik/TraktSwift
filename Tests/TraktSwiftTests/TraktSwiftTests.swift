@@ -13,16 +13,17 @@ final class TraktSwiftTests: TestCase {
     static var allTests = [
         ("testTrendingMovies", testTrendingMovies),
         ("testPopularMovies", testPopularMovies),
+        ("testMostPlayerMovies", testMostPlayerMovies)
     ]
     
     func testTrendingMovies() {
         let expectation = XCTestExpectation()
         client.trendingMovies(completion: { result in
             switch result {
-                case .success(let response):
-                    XCTAssertTrue(response.trendingMovies.isEmpty)
-                case .failure(let error):
-                    XCTFail(error.localizedDescription)
+            case .success(let response):
+                XCTAssertTrue(response.trendingMovies.isEmpty)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         })
@@ -33,10 +34,10 @@ final class TraktSwiftTests: TestCase {
         let expectation = XCTestExpectation()
         client.popularMovies(completion: { result in
             switch result {
-                case .success(let response):
-                    XCTAssertFalse(response.movies.isEmpty)
-                case .failure(let error):
-                    XCTFail(error.localizedDescription)
+            case .success(let response):
+                XCTAssertFalse(response.movies.isEmpty)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         })
@@ -47,10 +48,10 @@ final class TraktSwiftTests: TestCase {
         let expectation = XCTestExpectation()
         client.mostPlayedMovies(completion: { result in
             switch result {
-                case .success(let response):
-                    XCTAssertFalse(response.movies.isEmpty)
-                case .failure(let error):
-                    XCTFail(error.localizedDescription)
+            case .success(let response):
+                XCTAssertFalse(response.movies.isEmpty)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
         })
