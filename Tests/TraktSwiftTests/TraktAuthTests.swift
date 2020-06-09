@@ -39,7 +39,6 @@ final class TraktAuthCombineTests: CombineTestCase {
                 XCTAssertFalse(response.deviceCode.isEmpty)
                 XCTAssertTrue(response.userCode.count == 8)
                 XCTAssertEqual(response.verificationURL.absoluteString, "https://staging.trakt.tv/activate")
-                XCTAssertEqual(response.verificationURL.absoluteString, "https://staging.trakt.tv/activate")
                 XCTAssertEqual(response.expiresIn, 600)
                 XCTAssertEqual(response.interval, 5)
                 expectation.fulfill()

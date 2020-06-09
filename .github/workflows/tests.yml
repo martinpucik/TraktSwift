@@ -12,11 +12,18 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run tests
-      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES "OTHER_SWIFT_FLAGS=-D TESTING" | xcpretty
+      run: set -o pipefail && xcodebuild test -scheme TraktSwift -enableCodeCoverage YES -derivedDataPath "./build" | xcpretty
       env:
           TESTS_TRAKT_STAGING_CLIENT_ID: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_ID }}
+          TESTS_TRAKT_STAGING_CLIENT_SECRET: ${{ secrets.TESTS_TRAKT_STAGING_CLIENT_SECRET }}
     - uses: codecov/codecov-action@v1
       name: CodeCov export
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
+    - name: Upload failure artifacts
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-artifacts
+        path: ./build/Logs/Tests
