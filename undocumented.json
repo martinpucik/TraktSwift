@@ -1,0 +1,726 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 10,
+      "symbol": "SearchResultError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 11,
+      "symbol": "SearchResultError.scopeNotImplemented",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 14,
+      "symbol": "TraktError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 15,
+      "symbol": "TraktError.responseValidationFailed(message:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 18,
+      "symbol": "AuthError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Error.swift",
+      "line": 19,
+      "symbol": "AuthError.deviceCodeNotAuthorizedYet",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Pagination.swift",
+      "line": 30,
+      "symbol": "Page.default",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/Pagination.swift",
+      "line": 34,
+      "symbol": "Page.init(page:limit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 10,
+      "symbol": "SearchResultType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 11,
+      "symbol": "SearchResultType.movie(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 12,
+      "symbol": "SearchResultType.episode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 12,
+      "symbol": "SearchResultType.list",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 12,
+      "symbol": "SearchResultType.person",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchResultType.swift",
+      "line": 12,
+      "symbol": "SearchResultType.show",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 10,
+      "symbol": "SearchScope",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 11,
+      "symbol": "SearchScope.episode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 11,
+      "symbol": "SearchScope.list",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 11,
+      "symbol": "SearchScope.movie",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 11,
+      "symbol": "SearchScope.person",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/SearchScope.swift",
+      "line": 11,
+      "symbol": "SearchScope.show",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/TimePeriod.swift",
+      "line": 10,
+      "symbol": "TimePeriod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/TimePeriod.swift",
+      "line": 11,
+      "symbol": "TimePeriod.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/TimePeriod.swift",
+      "line": 11,
+      "symbol": "TimePeriod.monthly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/TimePeriod.swift",
+      "line": 11,
+      "symbol": "TimePeriod.weekly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Definitions/TimePeriod.swift",
+      "line": 11,
+      "symbol": "TimePeriod.yearly",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 10,
+      "symbol": "Identifiers",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 11,
+      "symbol": "Identifiers.trakt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 12,
+      "symbol": "Identifiers.slug",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 13,
+      "symbol": "Identifiers.imdb",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 14,
+      "symbol": "Identifiers.tmdb",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Identifiers.swift",
+      "line": 15,
+      "symbol": "Identifiers.tvdb",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Movie.swift",
+      "line": 10,
+      "symbol": "Movie",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Movie.swift",
+      "line": 11,
+      "symbol": "Movie.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Movie.swift",
+      "line": 12,
+      "symbol": "Movie.year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/Movie.swift",
+      "line": 13,
+      "symbol": "Movie.ids",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/MovieMostPlayed.swift",
+      "line": 17,
+      "symbol": "MovieMostPlayed",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/MovieTrending.swift",
+      "line": 10,
+      "symbol": "MovieTrending",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/MovieTrending.swift",
+      "line": 11,
+      "symbol": "MovieTrending.watchers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/MovieTrending.swift",
+      "line": 12,
+      "symbol": "MovieTrending.movie",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/SearchResult.swift",
+      "line": 14,
+      "symbol": "SearchResult",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/SearchResult.swift",
+      "line": 18,
+      "symbol": "SearchResult.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Models/SearchResult.swift",
+      "line": 19,
+      "symbol": "SearchResult.score",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Private classes/Client.swift",
+      "line": 13,
+      "symbol": "Client",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Private classes/Client.swift",
+      "line": 21,
+      "symbol": "Client.init(baseURL:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Private classes/Client.swift",
+      "line": 27,
+      "symbol": "Client.request(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Private classes/Client.swift",
+      "line": 45,
+      "symbol": "Client.request(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ClientProviding.swift",
+      "line": 13,
+      "symbol": "ClientProviding",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ClientProviding.swift",
+      "line": 14,
+      "symbol": "ClientProviding.request(_:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ClientProviding.swift",
+      "line": 17,
+      "symbol": "ClientProviding.request(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 10,
+      "symbol": "HttpMethod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 11,
+      "symbol": "HttpMethod.GET",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 12,
+      "symbol": "HttpMethod.PUT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 13,
+      "symbol": "HttpMethod.POST",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 14,
+      "symbol": "HttpMethod.DELETE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 15,
+      "symbol": "HttpMethod.HEAD",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 18,
+      "symbol": "ResourceProviding",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 19,
+      "symbol": "ResourceProviding.method",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 20,
+      "symbol": "ResourceProviding.path",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 21,
+      "symbol": "ResourceProviding.parameters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 22,
+      "symbol": "ResourceProviding.headers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 23,
+      "symbol": "ResourceProviding.page",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResourceProviding.swift",
+      "line": 24,
+      "symbol": "ResourceProviding.makeUrlRequest(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 12,
+      "symbol": "ResponseProviding",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 16,
+      "symbol": "ResponsePaginating",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 17,
+      "symbol": "ResponsePaginating.pagination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 20,
+      "symbol": "ResponsePagination",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 29,
+      "symbol": "ResponseValidating",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 30,
+      "symbol": "ResponseValidating.validate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 33,
+      "symbol": "ResponseValidating",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Protocols/ResponseProviding.swift",
+      "line": 34,
+      "symbol": "ResponseValidating.validate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 12,
+      "symbol": "AuthGenerateDeviceCodeResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 16,
+      "symbol": "AuthGenerateDeviceCodeResponse.deviceCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 17,
+      "symbol": "AuthGenerateDeviceCodeResponse.userCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 18,
+      "symbol": "AuthGenerateDeviceCodeResponse.verificationURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 19,
+      "symbol": "AuthGenerateDeviceCodeResponse.expiresIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 20,
+      "symbol": "AuthGenerateDeviceCodeResponse.interval",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 46,
+      "symbol": "AuthRequestDeviceTokenResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 50,
+      "symbol": "AuthRequestDeviceTokenResponse.accessToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 51,
+      "symbol": "AuthRequestDeviceTokenResponse.refreshToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 52,
+      "symbol": "AuthRequestDeviceTokenResponse.tokenType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 53,
+      "symbol": "AuthRequestDeviceTokenResponse.expiresIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 54,
+      "symbol": "AuthRequestDeviceTokenResponse.scope",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 55,
+      "symbol": "AuthRequestDeviceTokenResponse.createdAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/AuthResponses.swift",
+      "line": 80,
+      "symbol": "AuthRequestDeviceTokenResponse.validate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 10,
+      "symbol": "MovieTrendingResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 11,
+      "symbol": "MovieTrendingResponse.trendingMovies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 19,
+      "symbol": "MoviePopularResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 20,
+      "symbol": "MoviePopularResponse.movies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 28,
+      "symbol": "MovieMostPlayedResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/MovieResponses.swift",
+      "line": 29,
+      "symbol": "MovieMostPlayedResponse.movies",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/SearchResponses.swift",
+      "line": 10,
+      "symbol": "SearchResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/Responses/SearchResponses.swift",
+      "line": 11,
+      "symbol": "SearchResponse.results",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 10,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 15,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 15,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 20,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 25,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwift.swift",
+      "line": 37,
+      "symbol": "Trakt",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwiftAuth.swift",
+      "line": 28,
+      "symbol": "Trakt.requestDeviceToken(deviceCodeResponse:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwiftMovies.swift",
+      "line": 24,
+      "symbol": "Trakt.popularMovies(page:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwiftMovies.swift",
+      "line": 28,
+      "symbol": "Trakt.mostPlayedMovies(period:page:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwiftSearch.swift",
+      "line": 17,
+      "symbol": "Trakt.search(query:in:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/TraktSwift/TraktSwift/Sources/TraktSwift/TraktSwiftSearch.swift",
+      "line": 26,
+      "symbol": "Trakt.search(query:in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/TraktSwift/TraktSwift"
+}

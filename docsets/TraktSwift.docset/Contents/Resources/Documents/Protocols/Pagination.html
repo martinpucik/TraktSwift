@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pagination Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Pagination" class="dashAnchor"></a>
+    <a title="Pagination Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TraktSwift Docs</a> (19% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TraktSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Pagination Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../reserved.html">Reserved</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AuthError.html">AuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchResultError.html">SearchResultError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchResultType.html">SearchResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchScope.html">SearchScope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TimePeriod.html">TimePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TraktError.html">TraktError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientProviding.html">ClientProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Pagination.html">Pagination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceProviding.html">ResourceProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponsePaginating.html">ResponsePaginating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10TraktSwift17ResponseProvidingP">ResponseProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponseValidating.html">ResponseValidating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AuthGenerateDeviceCodeResponse.html">AuthGenerateDeviceCodeResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AuthRequestDeviceTokenResponse.html">AuthRequestDeviceTokenResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Identifiers.html">Identifiers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Movie.html">Movie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieMostPlayed.html">MovieMostPlayed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieMostPlayedResponse.html">MovieMostPlayedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MoviePopularResponse.html">MoviePopularResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieTrending.html">MovieTrending</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieTrendingResponse.html">MovieTrendingResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Page.html">Page</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:10TraktSwift18ResponsePaginationV">ResponsePagination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SearchResponse.html">SearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SearchResult.html">SearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Trakt.html">Trakt</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Pagination</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Pagination</span></code></pre>
+
+                </div>
+              </div>
+            <p>Some methods are paginated. Methods with Pagination will load 1 page of 10 items by default.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift10PaginationP4pageSivp"></a>
+                    <a name="//apple_ref/swift/Property/page" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift10PaginationP4pageSivp">page</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of page of results to be returned. Default is 1</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift10PaginationP5limitSivp"></a>
+                    <a name="//apple_ref/swift/Property/limit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift10PaginationP5limitSivp">limit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of results to return per page. Default is 10</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift10PaginationP18urlComponentsValueSDyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/urlComponentsValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift10PaginationP18urlComponentsValueSDyS2SGvp">urlComponentsValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL components raw representation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlComponentsValue</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/martinpucik/TraktSwift" target="_blank" rel="external">martinpucik</a>. All rights reserved. (Last updated: 2020-10-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

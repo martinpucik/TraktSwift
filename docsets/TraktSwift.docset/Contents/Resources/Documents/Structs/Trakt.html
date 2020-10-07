@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trakt Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Trakt" class="dashAnchor"></a>
+    <a title="Trakt Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TraktSwift Docs</a> (19% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TraktSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Trakt Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../reserved.html">Reserved</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AuthError.html">AuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchResultError.html">SearchResultError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchResultType.html">SearchResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SearchScope.html">SearchScope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TimePeriod.html">TimePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TraktError.html">TraktError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ClientProviding.html">ClientProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Pagination.html">Pagination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceProviding.html">ResourceProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponsePaginating.html">ResponsePaginating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10TraktSwift17ResponseProvidingP">ResponseProviding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponseValidating.html">ResponseValidating</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AuthGenerateDeviceCodeResponse.html">AuthGenerateDeviceCodeResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AuthRequestDeviceTokenResponse.html">AuthRequestDeviceTokenResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Identifiers.html">Identifiers</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Movie.html">Movie</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieMostPlayed.html">MovieMostPlayed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieMostPlayedResponse.html">MovieMostPlayedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MoviePopularResponse.html">MoviePopularResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieTrending.html">MovieTrending</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovieTrendingResponse.html">MovieTrendingResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Page.html">Page</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:10TraktSwift18ResponsePaginationV">ResponsePagination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SearchResponse.html">SearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SearchResult.html">SearchResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Trakt.html">Trakt</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Trakt</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Trakt</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Lifecycle"></a>
+                  <h3 class="section-name"><p>Lifecycle</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V11clientIDKey0C9SecretKey6bundle0C0ACSS_SSSo8NSBundleCAA15ClientProviding_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(clientIDKey:clientSecretKey:bundle:client:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V11clientIDKey0C9SecretKey6bundle0C0ACSS_SSSo8NSBundleCAA15ClientProviding_ptcfc">init(clientIDKey:<wbr>clientSecretKey:<wbr>bundle:<wbr>client:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the TrackSwift object with TraktTV clientID and clientSecret stored
+in main Bundle infoDictionary</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">clientIDKey</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"TRAKT_CLIENT_ID_KEY"</span><span class="p">,</span>
+            <span class="nv">clientSecretKey</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"TRAKT_CLIENT_SECRET_KEY"</span><span class="p">,</span>
+            <span class="nv">bundle</span><span class="p">:</span> <span class="kt">Bundle</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="p">,</span>
+            <span class="nv">client</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ClientProviding.html">ClientProviding</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Client.html">Client</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientIDKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecretKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bundle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V8clientID0C6Secret0C0ACSS_SSAA15ClientProviding_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(clientID:clientSecret:client:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V8clientID0C6Secret0C0ACSS_SSAA15ClientProviding_ptcfc">init(clientID:<wbr>clientSecret:<wbr>client:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the TrackSwift object directly providing your TraktTV clientID and clientSecret</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">clientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">client</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ClientProviding.html">ClientProviding</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Client.html">Client</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clientSecret</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Auth%20Combine"></a>
+                <a name="//apple_ref/swift/Section/Auth Combine" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Auth%20Combine"></a>
+                  <h3 class="section-name"><p>Auth Combine</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V18generateDeviceCode7Combine12AnyPublisherVyAA012AuthGeneratedE8ResponseVs5Error_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/generateDeviceCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V18generateDeviceCode7Combine12AnyPublisherVyAA012AuthGeneratedE8ResponseVs5Error_pGvp">generateDeviceCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate new codes to start the device authentication process.
+The <code>device_code</code> and <code>interval</code> will be used later to poll for the <code>access_token</code>
+The <code>user_code</code> and <code>verification_url</code> should be presented to the user as mentioned in the flow steps above.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">generateDeviceCode</span><span class="p">:</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AuthGenerateDeviceCodeResponse.html">AuthGenerateDeviceCodeResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V18requestDeviceToken18deviceCodeResponse7Combine12AnyPublisherVyAA011AuthRequestdeH0Vs5Error_pGAA0l8GeneratedgH0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/requestDeviceToken(deviceCodeResponse:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V18requestDeviceToken18deviceCodeResponse7Combine12AnyPublisherVyAA011AuthRequestdeH0Vs5Error_pGAA0l8GeneratedgH0V_tF">requestDeviceToken(deviceCodeResponse:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestDeviceToken</span><span class="p">(</span><span class="nv">deviceCodeResponse</span><span class="p">:</span> <span class="kt"><a href="../Structs/AuthGenerateDeviceCodeResponse.html">AuthGenerateDeviceCodeResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AuthRequestDeviceTokenResponse.html">AuthRequestDeviceTokenResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Movies"></a>
+                <a name="//apple_ref/swift/Section/Movies" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Movies"></a>
+                  <h3 class="section-name"><p>Movies</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V14trendingMovies4page10completionSo20NSURLSessionDataTaskCAA4PageV_ys6ResultOyAA21MovieTrendingResponseVs5Error_pGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/trendingMovies(page:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V14trendingMovies4page10completionSo20NSURLSessionDataTaskCAA4PageV_ys6ResultOyAA21MovieTrendingResponseVs5Error_pGcSgtF">trendingMovies(page:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all movies being watched right now. Movies with the most users are returned first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">trendingMovies</span><span class="p">(</span><span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MovieTrendingResponse.html">MovieTrendingResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V13popularMovies4page10completionSo20NSURLSessionDataTaskCAA4PageV_ys6ResultOyAA20MoviePopularResponseVs5Error_pGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/popularMovies(page:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V13popularMovies4page10completionSo20NSURLSessionDataTaskCAA4PageV_ys6ResultOyAA20MoviePopularResponseVs5Error_pGcSgtF">popularMovies(page:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">popularMovies</span><span class="p">(</span><span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MoviePopularResponse.html">MoviePopularResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V16mostPlayedMovies6period4page10completionSo20NSURLSessionDataTaskCAA10TimePeriodO_AA4PageVys6ResultOyAA09MovieMostD8ResponseVs5Error_pGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/mostPlayedMovies(period:page:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V16mostPlayedMovies6period4page10completionSo20NSURLSessionDataTaskCAA10TimePeriodO_AA4PageVys6ResultOyAA09MovieMostD8ResponseVs5Error_pGcSgtF">mostPlayedMovies(period:<wbr>page:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">mostPlayedMovies</span><span class="p">(</span><span class="nv">period</span><span class="p">:</span> <span class="kt"><a href="../Enums/TimePeriod.html">TimePeriod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">weekly</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MovieMostPlayedResponse.html">MovieMostPlayedResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Movies%20Combine"></a>
+                <a name="//apple_ref/swift/Section/Movies Combine" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Movies%20Combine"></a>
+                  <h3 class="section-name"><p>Movies Combine</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V14trendingMovies4page7Combine12AnyPublisherVyAA21MovieTrendingResponseVs5Error_pGAA4PageV_tF"></a>
+                    <a name="//apple_ref/swift/Method/trendingMovies(page:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V14trendingMovies4page7Combine12AnyPublisherVyAA21MovieTrendingResponseVs5Error_pGAA4PageV_tF">trendingMovies(page:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns all movies being watched right now. Movies with the most users are returned first.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">trendingMovies</span><span class="p">(</span><span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MovieTrendingResponse.html">MovieTrendingResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Publisher with MovieTrendingResponse on success</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V13popularMovies4page7Combine12AnyPublisherVyAA20MoviePopularResponseVs5Error_pGAA4PageV_tF"></a>
+                    <a name="//apple_ref/swift/Method/popularMovies(page:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V13popularMovies4page7Combine12AnyPublisherVyAA20MoviePopularResponseVs5Error_pGAA4PageV_tF">popularMovies(page:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the most popular movies. Popularity is calculated using the rating percentage and the number of ratings.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">popularMovies</span><span class="p">(</span><span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MoviePopularResponse.html">MoviePopularResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Publisher with MoviePopularResponse on success</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V16mostPlayedMovies6period4page7Combine12AnyPublisherVyAA09MovieMostD8ResponseVs5Error_pGAA10TimePeriodO_AA4PageVtF"></a>
+                    <a name="//apple_ref/swift/Method/mostPlayedMovies(period:page:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V16mostPlayedMovies6period4page7Combine12AnyPublisherVyAA09MovieMostD8ResponseVs5Error_pGAA10TimePeriodO_AA4PageVtF">mostPlayedMovies(period:<wbr>page:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the most played (a single user can watch multiple times) movies in the specified time period, defaulting to weekly.
+All stats are relative to the specific time period.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mostPlayedMovies</span><span class="p">(</span><span class="nv">period</span><span class="p">:</span> <span class="kt"><a href="../Enums/TimePeriod.html">TimePeriod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">weekly</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MovieMostPlayedResponse.html">MovieMostPlayedResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>period</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V17mostWatchedMovies6period4page7Combine12AnyPublisherVyAA20MoviePopularResponseVs5Error_pGAA10TimePeriodO_AA4PageVtF"></a>
+                    <a name="//apple_ref/swift/Method/mostWatchedMovies(period:page:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V17mostWatchedMovies6period4page7Combine12AnyPublisherVyAA20MoviePopularResponseVs5Error_pGAA10TimePeriodO_AA4PageVtF">mostWatchedMovies(period:<wbr>page:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the most watched (unique users) movies in the specified time period, defaulting to weekly.
+All stats are relative to the specific time period.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mostWatchedMovies</span><span class="p">(</span><span class="nv">period</span><span class="p">:</span> <span class="kt"><a href="../Enums/TimePeriod.html">TimePeriod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">weekly</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt"><a href="../Structs/Page.html">Page</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/MoviePopularResponse.html">MoviePopularResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Search"></a>
+                <a name="//apple_ref/swift/Section/Search" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Search"></a>
+                  <h3 class="section-name"><p>Search</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V6search5query2in10completionSo20NSURLSessionDataTaskCSS_SayAA11SearchScopeOGys6ResultOyAA0J8ResponseVs5Error_pGcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/search(query:in:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V6search5query2in10completionSo20NSURLSessionDataTaskCSS_SayAA11SearchScopeOGys6ResultOyAA0J8ResponseVs5Error_pGcSgtF">search(query:<wbr>in:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">in</span> <span class="nv">scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/SearchScope.html">SearchScope</a></span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SearchResponse.html">SearchResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">-&gt;</span> <span class="kt">URLSessionDataTask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Search%20Combine"></a>
+                <a name="//apple_ref/swift/Section/Search Combine" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Search%20Combine"></a>
+                  <h3 class="section-name"><p>Search Combine</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10TraktSwift0A0V6search5query2in7Combine12AnyPublisherVyAA14SearchResponseVs5Error_pGSS_SayAA0I5ScopeOGtF"></a>
+                    <a name="//apple_ref/swift/Method/search(query:in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10TraktSwift0A0V6search5query2in7Combine12AnyPublisherVyAA14SearchResponseVs5Error_pGSS_SayAA0I5ScopeOGtF">search(query:<wbr>in:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">in</span> <span class="nv">scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/SearchScope.html">SearchScope</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/SearchResponse.html">SearchResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/martinpucik/TraktSwift" target="_blank" rel="external">martinpucik</a>. All rights reserved. (Last updated: 2020-10-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
